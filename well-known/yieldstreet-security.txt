@@ -1,0 +1,6 @@
+Contact: mailto:security@willowwealth.com
+Expires: 2028-06-01T03:59:00.000Z
+Preferred-Languages: en
+Canonical: https://www.willowwealth.com/.well-known/security.txt
+Policy: https://www.willowwealth.com/vulnerability-disclosure-policy
+Hiring: https://www.willowwealth.com/careers

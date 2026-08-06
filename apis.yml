@@ -1,7 +1,16 @@
 aid: yieldstreet
 name: Willow Wealth
-description: 'Willow Wealth is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Willow Wealth Inc. - formerly Yieldstreet - is a New York City financial technology
+  company that operates an online private-markets investing platform, giving accredited
+  and retail investors access to alternative asset classes including real estate, private
+  credit, private equity, art, legal finance, and third-party evergreen funds from
+  institutional managers. Founded in 2015 by Milind Mehere and Michael Weisz, the platform
+  reports more than 500,000 members and over $6 billion in cumulative investments, and
+  renamed itself Willow Wealth in late 2025. Investors reach it through a web portal and
+  iOS/Android apps; the company publishes no public developer program, API reference, or
+  machine-readable specification.
+image: https://www.willowwealth.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/yieldstreet/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,14 @@ created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Alternative Investments
+- Private Markets
+- Investing
+- Wealth Management
+- Financial Services
+- Fintech
+- Real Estate
+- Private Credit
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,51 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/yieldstreet-domain-security.yml
 - type: Website
+  url: https://www.willowwealth.com/
+- type: SecondaryMarket
   url: https://forgeglobal.com/yieldstreet_stock/
+- type: GitHubOrganization
+  url: https://github.com/yieldstreet
+- type: Blog
+  url: https://www.willowwealth.com/blog
+- type: Security
+  url: https://www.willowwealth.com/vulnerability-disclosure-policy
+- type: SecurityTxt
+  url: well-known/yieldstreet-security.txt
+- type: WellKnown
+  url: well-known/yieldstreet-well-known.yml
+- type: VulnerabilityDisclosure
+  url: security/yieldstreet-vulnerability-disclosure.yml
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Every developer host is NXDOMAIN on both willowwealth.com and the legacy
+    yieldstreet.com (api., developer., docs., dev.), the yieldstreet GitHub org's 14
+    public repos are internal Scala/Akka and React Native forks with no client library,
+    and no package exists on npm, PyPI or RubyGems - the private-markets platform is
+    sold as an end-user web and mobile product only.
+  evidence:
+  - url: https://api.willowwealth.com/
+    status: 0
+  - url: https://developer.willowwealth.com/
+    status: 0
+  - url: https://www.willowwealth.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.willowwealth.com/.well-known/agent-card.json
+    status: 404
+  - url: https://registry.npmjs.org/yieldstreet
+    status: 404
+  - url: https://api.github.com/orgs/yieldstreet/repos
+    status: 200
+  - url: https://www.willowwealth.com/.well-known/security.txt
+    status: 200
+  checked: '2026-08-05'

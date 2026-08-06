@@ -1,0 +1,35 @@
+generated: '2026-08-05'
+method: searched
+source: https://www.willowwealth.com/.well-known/
+host: https://www.willowwealth.com
+note: >-
+  Willow Wealth (formerly Yieldstreet) publishes no API host. The marketing/investor
+  site at www.willowwealth.com is the only reachable host, and it is the only one probed.
+  Static text assets under /.well-known/ and /robots.txt are served normally; HTML
+  document paths are answered by a Cloudflare bot-management interstitial (HTTP 403).
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  content_type: text/plain
+  file: yieldstreet-security.txt
+  spec: RFC 9116
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+x-evidence:
+  fetched: '2026-08-05'
+  probed_hosts:
+  - www.willowwealth.com
+  control: >-
+    /.well-known/* misses return a 555-byte text/html 404 from origin, distinct from the
+    4577-byte Cloudflare 403 interstitial returned for HTML paths, so the 404s above are
+    genuine absences and not a WAF artifact.
