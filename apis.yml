@@ -10,6 +10,17 @@ description: >-
   renamed itself Willow Wealth in late 2025. Investors reach it through a web portal and
   iOS/Android apps; the company publishes no public developer program, API reference, or
   machine-readable specification.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://www.willowwealth.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/yieldstreet/refs/heads/main/apis.yml
 x-type: company
